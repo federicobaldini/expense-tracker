@@ -5,7 +5,9 @@ import Card from "../UI/Card";
 const Expenses = (props) => {
   return (
     <Card className="expenses">
-      <ExpenseItem title={props.items[0].title} amount={props.items[0].amount} date={props.items[0].date} />
+      {props.items.map((expense) => (
+        <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} />
+      ))}
     </Card>
   );
 }
