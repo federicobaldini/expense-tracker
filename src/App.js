@@ -6,7 +6,9 @@ const App = () => {
   const [expenses, setExpenses] = useState([]);
 
   const addExpenseHandler = (expense) => {
-    setExpenses([...expenses, expense]);
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
 
   return (
