@@ -27,12 +27,12 @@
 }
 
 .new-expense button.alternative {
-  color: #220131;
+  color: #1f618d;
   border-color: transparent;
   background-color: transparent;
 }
 
 .new-expense button.alternative:hover,
 .new-expense button.alternative:active {
-  background-color: #ddb3f8;
+  background-color: #aed6f1;
 }
