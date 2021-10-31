@@ -5,6 +5,7 @@ import NewExpense from "./components/NewExpenses/NewExpense";
 const App = () => {
   const [expenses, setExpenses] = useState([]);
 
+  //update correctly dependent state
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
