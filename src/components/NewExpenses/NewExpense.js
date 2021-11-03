@@ -1,4 +1,4 @@
-import "./NewExpense.css";
+import styles from "./NewExpense.module.css";
 import { useState } from "react";
 import ExpenseForm from "./ExpenseForm";
 
@@ -23,7 +23,7 @@ const NewExpense = (props) => {
   };
 
   return (
-    <div className="new-expense">
+    <div className={styles['new-expense']}>
       {!isEditing ? (
         <button type="button" onClick={startEditingHandler}>
           Add New Expense

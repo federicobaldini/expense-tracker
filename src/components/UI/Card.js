@@ -1,5 +1,9 @@
 import "./Card.css";
 
+/*
+  No more used
+*/
+
 const Card = (props) => {
   const classes = "card " + props.className;
 
