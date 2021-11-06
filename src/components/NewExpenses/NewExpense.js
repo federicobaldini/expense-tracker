@@ -23,9 +23,9 @@ const NewExpense = (props) => {
   };
 
   return (
-    <div className={classes["new-expense"]}>
+    <div className={classes['new-expense']}>
       {!isEditing ? (
-        <button type="button" onClick={startEditingHandler}>
+        <button className={classes['new-expense__button']} type="button" onClick={startEditingHandler}>
           Add New Expense
         </button>
       ) : (

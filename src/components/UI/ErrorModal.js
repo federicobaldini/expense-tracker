@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import classes from './ErrorModal.module.css';
+import classes from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
   return (

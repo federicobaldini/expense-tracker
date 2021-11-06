@@ -42,17 +42,19 @@
 
 .error-modal__button {
   font: inherit;
-  border: 1px solid #4f005f;
-  background: #4f005f;
+  border: 1px solid #1f618d ;
+  background-color: #1f618d ;
   color: white;
   padding: 0.25rem 1rem;
   cursor: pointer;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
 }
 
 .error-modal__button:hover,
 .error-modal__button:active {
-  background: #741188;
-  border-color: #741188;
+  background-color: #2e67a4;
+  border-color: #2e67a4;
 }
 
 .error-modal__button:focus {
