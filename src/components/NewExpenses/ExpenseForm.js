@@ -6,7 +6,7 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
-  const [error, setError] = useState();
+  const [error, setError] = useState({title: '', message: ''});
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -21,7 +21,7 @@ const ExpenseForm = (props) => {
   };
 
   const errorHandler = () => {
-    setError(null);
+    setError({title: '', message: ''});
   };
 
   const submitHandler = (event) => {
@@ -50,7 +50,7 @@ const ExpenseForm = (props) => {
 
   return (
     <Fragment>
-      {error && (
+      {(error.title !== '' || error.message !== '') && (
         <ErrorModal
           title={error.title}
           message={error.message}
@@ -89,8 +89,8 @@ const ExpenseForm = (props) => {
           </div>
         </div>
         <div className={classes['new-expense__actions']}>
-          <button type="button" onClick={props.onCancel}>Cancel</button>
-          <button type="submit">Add Expense</button>
+          <button className={classes['new-expense__button']} type="button" onClick={props.onCancel}>Cancel</button>
+          <button className={classes['new-expense__button']} type="submit">Add Expense</button>
         </div>
       </form>
     </Fragment>
