@@ -58,8 +58,8 @@ const ExpenseForm = (props) => {
         />
       )}
       <form onSubmit={submitHandler}>
-        <div className={classes['new-expense__controls']}>
-          <div className={classes['new-expense__control']}>
+        <div className={classes['expense-form__controls']}>
+          <div className={classes['expense-form__control']}>
             <label>Title</label>
             <input
               type="text"
@@ -67,7 +67,7 @@ const ExpenseForm = (props) => {
               onChange={titleChangeHandler}
             />
           </div>
-          <div className={classes['new-expense__control']}>
+          <div className={classes['expense-form__control']}>
             <label>Amount</label>
             <input
               type="number"
@@ -77,7 +77,7 @@ const ExpenseForm = (props) => {
               onChange={amountChangeHandler}
             />
           </div>
-          <div className={classes['new-expense__control']}>
+          <div className={classes['expense-form__control']}>
             <label>Date</label>
             <input
               type="date"
@@ -88,9 +88,9 @@ const ExpenseForm = (props) => {
             />
           </div>
         </div>
-        <div className={classes['new-expense__actions']}>
-          <button className={classes['new-expense__button']} type="button" onClick={props.onCancel}>Cancel</button>
-          <button className={classes['new-expense__button']} type="submit">Add Expense</button>
+        <div className={classes['expense-form__actions']}>
+          <button className={classes['expense-form__button']} type="button" onClick={props.onCancel}>Cancel</button>
+          <button className={classes['expense-form__button']} type="submit">Add Expense</button>
         </div>
       </form>
     </Fragment>

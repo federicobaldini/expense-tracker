@@ -1,4 +1,4 @@
-.new-expense__controls {
+.expense-form__controls {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -6,13 +6,13 @@
   text-align: left;
 }
 
-.new-expense__control label {
+.expense-form__control label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
 }
 
-.new-expense__control input {
+.expense-form__control input {
   font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
@@ -21,11 +21,11 @@
   max-width: 100%;
 }
 
-.new-expense__actions {
+.expense-form__actions {
   text-align: right;
 }
 
-.new-expense__button {
+.expense-form__button {
   font: inherit;
   cursor: pointer;
   padding: 1rem 2rem;
@@ -36,20 +36,31 @@
   margin-right: 1rem;
 }
 
-.new-expense__button:hover,
-.new-expense__button:active {
+.expense-form__button:hover,
+.expense-form__button:active {
   background-color: #2e67a4;
   border-color: #2e67a4;
 }
 
-.new-expense__button.alternative {
+.expense-form__button.alternative {
   color: #1f618d;
   border-color: transparent;
   background-color: transparent;
 }
 
-.new-expense__button.alternative:hover,
-.new-expense__button.alternative:active {
+.expense-form__button.alternative:hover,
+.expense-form__button.alternative:active {
   background-color: #aed6f1;
+}
+
+@media (max-width: 370px) {
+  .expense-form__button {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .expense-form__control input {
+    width: auto;
+    max-width: 100%;
+  }
 }
 
