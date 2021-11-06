@@ -1,4 +1,4 @@
-import styles from "./Expenses.module.css";
+import classes from "./Expenses.module.css";
 import { useState } from "react";
 import ExpenseFilter from "./ExpenseFilter";
 import ExpensesList from "./ExpensesList";
@@ -16,7 +16,7 @@ const Expenses = (props) => {
   });
 
   return (
-    <div className={styles['expenses']}>
+    <div className={classes['expenses']}>
       <ExpenseFilter
         onChangeFilter={filterChangeHandler}
         selected={filteredYear}
