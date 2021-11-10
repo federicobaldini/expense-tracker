@@ -23,6 +23,7 @@
   margin: 0 1rem;
   color: white;
   padding: 0.5rem;
+  text-align: left;
 }
 
 .expense-item__price {
