@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import classes from './Login.module.css';
-import Card from '../UI/Card/Card';
-import Button from '../UI/Button/ButtonRound';
+import { useState } from "react";
+import classes from "./Login.module.css";
+import Card from "../UI/Card/Card";
+import Button from "../UI/Button/ButtonRound";
 
 const Login = (props) => {
-  const [enteredEmail, setEnteredEmail] = useState('');
+  const [enteredEmail, setEnteredEmail] = useState("");
   const [emailIsValid, setEmailIsValid] = useState();
-  const [enteredPassword, setEnteredPassword] = useState('');
+  const [enteredPassword, setEnteredPassword] = useState("");
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 

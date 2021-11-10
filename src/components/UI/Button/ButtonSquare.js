@@ -1,4 +1,4 @@
-import classes from './ButtonSquare.module.css';
+import classes from "./ButtonSquare.module.css";
 
 const ButtonSquare = (props) => {
   return (
