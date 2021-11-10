@@ -1,6 +1,6 @@
 import { useState, Fragment, useRef } from "react";
 import classes from "./ExpenseFormRef.module.css";
-import ErrorModal from "../components/UI/ErrorModal";
+import ErrorModal from "../components/UI/Modal/ErrorModal";
 
 const ExpenseFormRef = (props) => {
   const titleInputRef = useRef();

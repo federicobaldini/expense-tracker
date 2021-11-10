@@ -1,6 +1,7 @@
 import { useState, Fragment } from "react";
 import classes from "./ExpenseForm.module.css";
-import ErrorModal from "../UI/ErrorModal";
+import ErrorModal from "../UI/Modal/ErrorModal";
+import Button from "../UI/Button/ButtonSquare"
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
@@ -89,8 +90,8 @@ const ExpenseForm = (props) => {
           </div>
         </div>
         <div className={classes['expense-form__actions']}>
-          <button className={classes['expense-form__button']} type="button" onClick={props.onCancel}>Cancel</button>
-          <button className={classes['expense-form__button']} type="submit">Add Expense</button>
+          <Button type="button" onClick={props.onCancel}>Cancel</Button>
+          <Button type="submit">Add Expense</Button>
         </div>
       </form>
     </Fragment>
