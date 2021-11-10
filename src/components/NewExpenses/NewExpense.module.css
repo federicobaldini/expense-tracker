@@ -8,31 +8,3 @@
   text-align: center;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
-
-.new-expense__button {
-  font: inherit;
-  cursor: pointer;
-  padding: 1rem 2rem;
-  border: 1px solid #1f618d ;
-  background-color: #1f618d ;
-  color: white;
-  border-radius: 12px;
-  margin-right: 1rem;
-}
-
-.new-expense__button:hover,
-.new-expense__button:active {
-  background-color: #2e67a4;
-  border-color: #2e67a4;
-}
-
-.new-expense__button.alternative {
-  color: #1f618d;
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.new-expense__button.alternative:hover,
-.new-expense__button.alternative:active {
-  background-color: #aed6f1;
-}

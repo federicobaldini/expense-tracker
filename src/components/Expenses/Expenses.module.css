@@ -5,3 +5,6 @@
     width: 50rem;
     max-width: 95%;
 }
+
+@media (max-width: 380px) {
+}

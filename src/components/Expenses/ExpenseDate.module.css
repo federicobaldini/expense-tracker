@@ -28,3 +28,10 @@
 .expense-date__year {
   font-size: 0.75rem;
 }
+
+@media (max-width: 380px) {
+  .expense-date {
+    width: 4.8rem;
+    height: 5rem;
+  }
+}

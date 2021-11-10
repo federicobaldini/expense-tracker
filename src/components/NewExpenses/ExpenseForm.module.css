@@ -25,41 +25,12 @@
   text-align: right;
 }
 
-.expense-form__button {
-  font: inherit;
-  cursor: pointer;
-  padding: 1rem 2rem;
-  border: 1px solid #1f618d ;
-  background-color: #1f618d ;
-  color: white;
-  border-radius: 12px;
-  margin-right: 1rem;
-}
-
-.expense-form__button:hover,
-.expense-form__button:active {
-  background-color: #2e67a4;
-  border-color: #2e67a4;
-}
-
-.expense-form__button.alternative {
-  color: #1f618d;
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.expense-form__button.alternative:hover,
-.expense-form__button.alternative:active {
-  background-color: #aed6f1;
-}
-
-@media (max-width: 370px) {
-  .expense-form__button {
+@media (max-width: 380px) {
+  .expense-form__actions button {
     padding: 0.5rem 0.5rem;
   }
 
-  .expense-form__control input {
-    width: auto;
-    max-width: 100%;
+  .expense-form__control {
+    width: 100%;
   }
 }

@@ -9,10 +9,9 @@
 
 .expense-item__description {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
   align-items: flex-end;
-  flex-flow: column-reverse;
   justify-content: flex-start;
   flex: 1;
 }
@@ -23,7 +22,7 @@
   flex: 1;
   margin: 0 1rem;
   color: white;
-  text-align: left;
+  padding: 0.5rem;
 }
 
 .expense-item__price {
@@ -34,9 +33,10 @@
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
+  display: inline-block;
 }
 
-@media (min-width: 580px) {
+@media (max-width: 380px) {
   .expense-item__description {
     flex-direction: row;
     align-items: center;
@@ -45,11 +45,10 @@
   }
 
   .expense-item__description h2 {
-    font-size: 1.25rem;
+    font-size: 0.9rem;
   }
 
   .expense-item__price {
-    font-size: 1.25rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem;
   }
 }
