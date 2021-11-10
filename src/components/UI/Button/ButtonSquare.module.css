@@ -1,0 +1,36 @@
+.button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #1f618d ;
+  background-color: #1f618d ;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+
+.button:hover,
+.button:active {
+  background: #2e67a4;
+  border-color: #2e67a4;
+}
+
+.button:focus {
+  outline: none;
+}
+
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+@media (max-width: 370px) {
+  button {
+    padding: 0.5rem 0.5rem;
+  }
+}
