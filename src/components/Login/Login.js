@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import classes from "./Login.module.css";
 import Card from "../UI/Card/Card";
 import Button from "../UI/Button/ButtonRound";
@@ -10,24 +10,22 @@ const Login = (props) => {
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
+  useEffect(() => {
+    setFormIsValid(
+      enteredEmail.includes("@") && enteredPassword.trim().length > 6
+    );
+  }, [enteredEmail, enteredPassword]);
+
   const emailChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
-
-    setFormIsValid(
-      event.target.value.includes('@') && enteredPassword.trim().length > 6
-    );
   };
 
   const passwordChangeHandler = (event) => {
     setEnteredPassword(event.target.value);
-
-    setFormIsValid(
-      event.target.value.trim().length > 6 && enteredEmail.includes('@')
-    );
   };
 
   const validateEmailHandler = () => {
-    setEmailIsValid(enteredEmail.includes('@'));
+    setEmailIsValid(enteredEmail.includes("@"));
   };
 
   const validatePasswordHandler = () => {
@@ -40,11 +38,11 @@ const Login = (props) => {
   };
 
   return (
-    <Card className={classes['login']}>
+    <Card className={classes["login"]}>
       <form onSubmit={submitHandler}>
         <div
-          className={`${classes['control']} ${
-            emailIsValid === false ? classes['invalid'] : ''
+          className={`${classes["control"]} ${
+            emailIsValid === false ? classes["invalid"] : ""
           }`}
         >
           <label htmlFor="email">E-Mail</label>
@@ -57,8 +55,8 @@ const Login = (props) => {
           />
         </div>
         <div
-          className={`${classes['control']} ${
-            passwordIsValid === false ? classes['invalid'] : ''
+          className={`${classes["control"]} ${
+            passwordIsValid === false ? classes["invalid"] : ""
           }`}
         >
           <label htmlFor="password">Password</label>
@@ -70,7 +68,7 @@ const Login = (props) => {
             onBlur={validatePasswordHandler}
           />
         </div>
-        <div className={classes['actions']}>
+        <div className={classes["actions"]}>
           <Button type="submit" disabled={!formIsValid}>
             Login
           </Button>
