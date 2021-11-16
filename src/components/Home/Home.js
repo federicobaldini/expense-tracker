@@ -1,5 +1,5 @@
 import { useState } from "react";
-import classes from './Home.module.css';
+import classes from "./Home.module.css";
 import Expenses from "../Expenses/Expenses";
 import NewExpense from "../NewExpenses/NewExpense";
 
@@ -14,7 +14,7 @@ const Home = (props) => {
   };
 
   return (
-    <div className={classes['home']}>
+    <div className={classes["home"]}>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
