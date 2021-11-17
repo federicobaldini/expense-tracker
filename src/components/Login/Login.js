@@ -18,7 +18,7 @@ const passwordReducer = (state, action) => {
     return { value: action.value, isValid: action.value.trim().length > 6 };
   }
   if (action.type === "INPUT_BLUR") {
-    return { value: state.value, isValid: state.value.trim().length > 6};
+    return { value: state.value, isValid: state.value.trim().length > 6 };
   }
   return { value: "", isValid: false };
 };
@@ -36,19 +36,21 @@ const Login = (props) => {
     isValid: null,
   });
 
-  /*
+  // whenever just the value changes and the validity did not change useEffect will not rerun
+  const { isValid: emailIsValid } = emailState;
+  const { isValid: passwordIsValid } = passwordState;
+
+  // useEffect guaranteed that this will run for every state update React performs
   useEffect(() => {
     const identifier = setTimeout(() => {
-      setFormIsValid(
-        enteredEmail.includes("@") && enteredPassword.trim().length > 6
-      );
+      setFormIsValid(emailIsValid && passwordIsValid);
     }, 500);
-    
+
+    // cleanup function
     return () => {
       clearTimeout(identifier);
     };
-  }, [enteredEmail, enteredPassword]);
-  */
+  }, [emailIsValid, passwordIsValid]);
 
   const emailChangeHandler = (event) => {
     dispatchEmail({ type: "USER_INPUT", value: event.target.value });
