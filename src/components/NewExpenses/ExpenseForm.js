@@ -7,7 +7,7 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
-  const [error, setError] = useState({title: '', message: ''});
+  const [error, setError] = useState({title: "", message: ""});
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -22,7 +22,7 @@ const ExpenseForm = (props) => {
   };
 
   const errorHandler = () => {
-    setError({title: '', message: ''});
+    setError({title: "", message: ""});
   };
 
   const submitHandler = (event) => {
@@ -30,8 +30,8 @@ const ExpenseForm = (props) => {
 
     if (enteredTitle.trim().length === 0 || enteredAmount.trim().length === 0 || enteredDate.trim().length === 0) {
       setError({
-        title: 'Invalid input',
-        message: 'Please enter a valid title, amount and date (non-empty values).',
+        title: "Invalid input",
+        message: "Please enter a valid title, amount and date (non-empty values).",
       });
       return;
     }
@@ -51,7 +51,7 @@ const ExpenseForm = (props) => {
 
   return (
     <Fragment>
-      {(error.title !== '' || error.message !== '') && (
+      {(error.title !== "" || error.message !== "") && (
         <ErrorModal
           title={error.title}
           message={error.message}
@@ -59,8 +59,8 @@ const ExpenseForm = (props) => {
         />
       )}
       <form onSubmit={submitHandler}>
-        <div className={classes['expense-form__controls']}>
-          <div className={classes['expense-form__control']}>
+        <div className={classes["expense-form__controls"]}>
+          <div className={classes["expense-form__control"]}>
             <label>Title</label>
             <input
               type="text"
@@ -68,7 +68,7 @@ const ExpenseForm = (props) => {
               onChange={titleChangeHandler}
             />
           </div>
-          <div className={classes['expense-form__control']}>
+          <div className={classes["expense-form__control"]}>
             <label>Amount</label>
             <input
               type="number"
@@ -78,7 +78,7 @@ const ExpenseForm = (props) => {
               onChange={amountChangeHandler}
             />
           </div>
-          <div className={classes['expense-form__control']}>
+          <div className={classes["expense-form__control"]}>
             <label>Date</label>
             <input
               type="date"
@@ -89,7 +89,7 @@ const ExpenseForm = (props) => {
             />
           </div>
         </div>
-        <div className={classes['expense-form__actions']}>
+        <div className={classes["expense-form__actions"]}>
           <Button type="button" onClick={props.onCancel}>Cancel</Button>
           <Button type="submit">Add Expense</Button>
         </div>

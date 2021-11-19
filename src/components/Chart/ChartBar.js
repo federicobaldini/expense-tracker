@@ -8,14 +8,14 @@ const ChartBar = (props) => {
   }
 
   return (
-    <div className={classes['chart-bar']}>
-      <div className={classes['chart-bar__inner']}>
+    <div className={classes["chart-bar"]}>
+      <div className={classes["chart-bar__inner"]}>
         <div
-          className={classes['chart-bar__fill']}
+          className={classes["chart-bar__fill"]}
           style={{ height: barFillHeight }}
         ></div>
       </div>
-      <div className={classes['chart-bar__label']}>{props.label}</div>
+      <div className={classes["chart-bar__label"]}>{props.label}</div>
     </div>
   );
 };
