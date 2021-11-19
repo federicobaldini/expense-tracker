@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
@@ -27,15 +27,13 @@ const App = () => {
   };
 
   return (
-    <Fragment>
-      <AuthContext.Provider>
-        <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
-        <main>
-          {!isLoggedIn && <Login onLogin={loginHandler} />}
-          {isLoggedIn && <Home onLogout={logoutHandler} />}
-        </main>
-      </AuthContext.Provider>
-    </Fragment>
+    <AuthContext.Provider value={{ isLoggedIn: isLoggedIn }}>
+      <MainHeader onLogout={logoutHandler} />
+      <main>
+        {!isLoggedIn && <Login onLogin={loginHandler} />}
+        {isLoggedIn && <Home onLogout={logoutHandler} />}
+      </main>
+    </AuthContext.Provider>
   );
 };
 
