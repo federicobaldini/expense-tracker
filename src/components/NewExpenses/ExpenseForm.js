@@ -1,7 +1,7 @@
 import { useState, Fragment } from "react";
 import classes from "./ExpenseForm.module.css";
 import ErrorModal from "../UI/Modal/ErrorModal";
-import Button from "../UI/Button/ButtonSquare"
+import Button from "../UI/Button/Button"
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");

@@ -1,7 +1,7 @@
 import { useState, useEffect, useReducer, useContext } from "react";
 import classes from "./Login.module.css";
 import Card from "../UI/Card/Card";
-import Button from "../UI/Button/ButtonRound";
+import Button from "../UI/Button/Button";
 import AuthContext from "../../store/auth-context";
 
 const emailReducer = (state, action) => {

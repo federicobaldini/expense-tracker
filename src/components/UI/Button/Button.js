@@ -1,6 +1,6 @@
-import classes from "./ButtonRound.module.css";
+import classes from "./Button.module.css";
 
-const ButtonRound = (props) => {
+const ButtonSquare = (props) => {
   return (
     <button
       type={props.type || "button"}
@@ -13,4 +13,4 @@ const ButtonRound = (props) => {
   );
 };
 
-export default ButtonRound;
+export default ButtonSquare;
