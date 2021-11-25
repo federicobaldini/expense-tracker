@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer, useContext } from "react";
+import { useState, useEffect, useReducer, useContext, useRef } from "react";
 import classes from "./Login.module.css";
 import Card from "../UI/Card/Card";
 import Button from "../UI/Button/Button";
@@ -39,6 +39,9 @@ const Login = (props) => {
 
   const authCtx = useContext(AuthContext);
 
+  const emailInputRef = useRef();
+  const passwordInputRef = useRef();
+
   // whenever just the value changes and the validity did not change useEffect will not rerun
   const { isValid: emailIsValid } = emailState;
   const { isValid: passwordIsValid } = passwordState;
@@ -75,13 +78,20 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    authCtx.onLogin(emailState.value, passwordState.value);
+    if (formIsValid) {
+      authCtx.onLogin(emailState.value, passwordState.value);
+    } else if (!emailIsValid) {
+      emailInputRef.current.focus();
+    } else if (!passwordIsValid) {
+      passwordInputRef.current.focus();
+    }
   };
 
   return (
     <Card className={classes["login"]}>
       <form onSubmit={submitHandler}>
         <Input
+          ref={emailInputRef}
           id="email"
           label="E-Mail"
           type="email"
@@ -91,6 +101,7 @@ const Login = (props) => {
           onBlur={validateEmailHandler}
         />
         <Input
+          ref={passwordInputRef}
           id="password"
           label="Password"
           type="text"
@@ -100,7 +111,7 @@ const Login = (props) => {
           onBlur={validatePasswordHandler}
         />
         <div className={classes["actions"]}>
-          <Button className={classes["actions__button"]} type="submit" disabled={!formIsValid}>
+          <Button className={classes["actions__button"]} type="submit">
             Login
           </Button>
         </div>
