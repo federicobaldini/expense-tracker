@@ -1,15 +1,15 @@
 Demo project of a web application to track expenses, using React.
 
 <p align="center">
-  <img src="https://github.com/federicobaldini/expense-tracker/tree/master/screens/login.png" alt="login" />
+  <img src="https://github.com/federicobaldini/expense-tracker/blob/master/login.png" alt="login" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/federicobaldini/expense-tracker/tree/master/screens/expense_add.png" alt="add" />
+  <img src="https://github.com/federicobaldini/expense-tracker/blob/master/expense_add.png" alt="add" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/federicobaldini/expense-tracker/tree/master/screens/expense_list.png" alt="list" />
+  <img src="https://github.com/federicobaldini/expense-tracker/blob/master/expense_list.png" alt="list" />
 </p>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
