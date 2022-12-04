@@ -1,4 +1,4 @@
-Demo project of a web application to track expenses, using React. You can login with any e-mail that contains the '@' character and any password with more that six characters.
+A web application to track expenses, using React. You can login with any e-mail that contains the '@' character and any password with more that six characters.
 
 Credit: https://github.com/mschwarzmueller and https://www.udemy.com/course/react-the-complete-guide-incl-redux/
 
