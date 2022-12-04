@@ -1,4 +1,4 @@
-Demo project of a web application to track expenses, using React.
+Demo project of a web application to track expenses, using React. You can login with any e-mail that contains the '@' character and any password with more that six characters.
 
 <p align="center">
   <img src="https://github.com/federicobaldini/expense-tracker/blob/master/login.png" alt="login" />
